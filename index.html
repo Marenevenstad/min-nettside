@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title> Maren - Bootstrap 5 profilside</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Egendefinert CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR (kollapser under 768px = md) -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">Min side</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Åpne meny"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- Minst 3 lenker til valgfrie nettsteder -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://arendalfotball.no" target="_blank" rel="noopener">Arendal Fotball</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://evenstadfoto.no" target="_blank" rel="noopener">Evenstadfoto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.google.com/maps" target="_blank" rel="noopener">Kart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO / "Simply Me"-aktig seksjon -->
+    <header class="bg-1 text-center py-5">
+      <div class="container">
+        <h1 class="display-5 fw-semibold mb-3">Simply Me</h1>
+        <p class="lead mb-4">En enkel Bootstrap 5 nettside med responsivt grid og carousel.</p>
+
+        <!-- Bilde av deg: rounded-circle + sentrert + bakgrunnsfarge -->
+        <div class="profile-wrap mx-auto">
+          <!-- Bytt src til ditt eget bilde, f.eks. images/me.jpg -->
+          <img
+            src="images/me.jpg"
+            alt="Bilde av meg"
+            class="rounded-circle profile-img"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- INFOBOKSER: 4 kolonner (lg=4), 2 (sm=2), 1 (xs=1) -->
+    <section class="bg-2 py-5">
+      <div class="container">
+        <h2 class="h3 fw-semibold text-center mb-4">Info / bokser</h2>
+
+        <div class="row g-4">
+          <!-- 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="info-box h-100">
+              <h3 class="h5 fw-semibold">Kort om meg</h3>
+              <p class="mb-0">
+                Jeg liker stilrene layouts, tydelig typografi og responsivt design. Gjerne med litt farge og personlighet!!
+                
+                (Denne boksen er bare tekst.)!!
+              </p>
+            </div>
+          </div>
+
+          <!-- 2: Bootstrap Card -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm">
+              <img src="images/card.jpg" class="card-img-top" alt="Eksempelbilde">
+              <div class="card-body">
+                <h3 class="card-title h5 fw-semibold">Bootstrap Card</h3>
+                <p class="card-text">
+                  Cards er fine for produkter, profiler eller små “features”.
+                </p>
+                <a class="btn btn-primary btn-sm" href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank" rel="noopener">
+                  Les mer
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: Kart (embed) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="info-box h-100">
+              <h3 class="h5 fw-semibold">Kart</h3>
+              <div class="ratio ratio-4x3">
+                <iframe
+                  src="https://www.google.com/maps?q=Stavanger&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Kart"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: Video (YouTube embed) -->
+          
+          <!-- 4 YOUTUBE -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="info-box h-100">
+              <h3 class="h5 fw-semibold">Video</h3>
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://www.youtube.com/watch?v=5g9LiS8wHW4&list=RD5g9LiS8wHW4&start_radio=1"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+	
+	<!--
+        <p class="text-center mt-4 mb-0 small text-muted">
+          Tips: Dra i bredden i Chrome DevTools og sjekk at grid blir 1/2/4 kolonner ved &lt;576 / ≥576 / ≥992.
+        </p> -->
+      </div>
+    </section>
+
+    <!-- BILDEGALLERI: Bootstrap Carousel -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="h3 fw-semibold text-center mb-4">Bildegalleri</h2>
+
+        <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Bilde 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Bilde 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Bilde 3"></button>
+          </div>
+
+          <div class="carousel-inner rounded-4 shadow-sm">
+            <div class="carousel-item active">
+              <img src="images/gallery-1.jpg" class="d-block w-100 carousel-img" alt="Galleri bilde 1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Min drømmeplass</h5>
+                <p>Her elsker jeg å være.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/gallery-2.jpg" class="d-block w-100 carousel-img" alt="Galleri bilde 2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Solnedgangen</h5>
+                <p>i Grimstad<3</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/gallery-3.jpg" class="d-block w-100 carousel-img" alt="Galleri bilde 3">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Portrett</h5>
+                <p>Av Lisa Lia</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Forrige</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Neste</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+        <p class="mb-1 fw-semibold">Takk for at du sjekket ut siden min!</p>
+        <p class="mb-0 small text-secondary">
+          Laget med Bootstrap 5 + litt egen CSS. © Maren 2026
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
